@@ -29,18 +29,18 @@ interface Data {
 }
 
 const customTagStyles = [
-  {
-    backgroundColor: "#132D27",
-    color: "#23BD8B",
-  },
-  {
-    backgroundColor: "#6F6B00",
-    color: "#D6D0A5",
-  },
-  {
-    backgroundColor: "#7E324F",
-    color: "#FFB2B2",
-  },
+    {
+        backgroundColor: "#132D27",
+        color: "#23BD8B",
+    },
+    {
+        backgroundColor: "#6F6B00",
+        color: "#D6D0A5",
+    },
+    {
+        backgroundColor: "#7E324F",
+        color: "#FFB2B2",
+    },
 ];
 
 const ResolutionPlan: React.FC = () => {
@@ -84,10 +84,13 @@ const ResolutionPlan: React.FC = () => {
               <div className="flex items-start flex-wrap mt-[6px] md:mt-2">
                 {dataObj?.["Account Breach"]?.[0]?.groups.map((tag, index) => {
                   const random = Math.floor(Math.random() * customTagStyles.length);
+                  const bgColor = customTagStyles[random].backgroundColor;
+                  const textColor = customTagStyles[random].color;
                   return (
                     <span
                       key={index}
-                      className={`bg-[${customTagStyles[random].backgroundColor}] rounded-lg text-[11px] md:text-[12px] font-bold text-[${customTagStyles[random].color}] py-[2px] md:py-[5px] px-2 md:px-4 mr-2 mb-[6px] md:mb-2 w-fit`}
+                      style={{ backgroundColor: bgColor, color: textColor }}
+                      className={`rounded-lg text-[11px] md:text-[12px] font-bold py-[2px] md:py-[5px] px-2 md:px-4 mr-2 mb-[6px] md:mb-2 w-fit`}
                     >
                       {tag}
                     </span>
@@ -108,10 +111,14 @@ const ResolutionPlan: React.FC = () => {
               <div className="flex items-start flex-wrap mt-2">
                 {dataObj?.["Compromised Password"]?.[0]?.groups.map((tag, index) => {
                   const random = Math.floor(Math.random() * customTagStyles.length);
+                  const bgColor = customTagStyles[random].backgroundColor;
+                  const textColor = customTagStyles[random].color;
+                  console.log(bgColor, textColor);
                   return (
                     <span
                       key={index}
-                      className={`bg-[${customTagStyles[random].backgroundColor}] rounded-lg text-[11px] md:text-[12px] font-bold text-[${customTagStyles[random].color}] py-[2px] md:py-[5px] px-2 md:px-4 mr-2 mb-[6px] md:mb-2 w-fit`}
+                      style={{ backgroundColor: bgColor, color: textColor }}
+                      className={`rounded-lg text-[11px] md:text-[12px] font-bold py-[2px] md:py-[5px] px-2 md:px-4 mr-2 mb-[6px] md:mb-2 w-fit`}
                     >
                       {tag}
                     </span>
@@ -132,10 +139,13 @@ const ResolutionPlan: React.FC = () => {
               <div className="flex items-start flex-wrap mt-2">
                 {dataObj?.["Human Behaviour / Security Training"]?.groups.map((tag, index) => {
                   const random = Math.floor(Math.random() * customTagStyles.length);
+                  const bgColor = customTagStyles[random].backgroundColor;
+                  const textColor = customTagStyles[random].color;
                   return (
                     <span
                       key={index}
-                      className={`bg-[${customTagStyles[random].backgroundColor}] rounded-lg text-[11px] md:text-[12px] font-bold text-[${customTagStyles[random].color}] py-[2px] md:py-[5px] px-2 md:px-4 mr-2 mb-[6px] md:mb-2 w-fit`}
+                      style={{ backgroundColor: bgColor, color: textColor }}
+                      className={`rounded-lg text-[11px] md:text-[12px] font-bold py-[2px] md:py-[5px] px-2 md:px-4 mr-2 mb-[6px] md:mb-2 w-fit`}
                     >
                       {tag}
                     </span>
